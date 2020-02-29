@@ -1,0 +1,30 @@
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Sıra</th>
+            <th scope="col">Ad</th>
+            <th scope="col">Soyad</th>
+            <th scope="col">Telefon</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let value of candidates">
+            <td >
+                {{value.id}}
+            </td>
+            <td>
+                {{value.name}}
+            </td>
+            <td>
+                {{value.username}}
+            </td>
+            <td>
+                {{value.phone}}
+            </td>
+            <td>
+                <button type="button" routerLink="/candidates/{{value.id}}" class="btn btn-primary btn-lg disabled">Detay</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
