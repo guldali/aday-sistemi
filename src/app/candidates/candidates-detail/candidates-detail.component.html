@@ -1,4 +1,5 @@
-
+<h3 style=" text-align: center; margin-top: 75px;">Aday Detay Bilgileri</h3>
+<br>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -11,12 +12,10 @@
         </tr>
     </thead>
     <tbody>
-        
         <tr *ngFor="let value of candidate">
-           
-            <td >
+            <td>
+                {{value.id}}
 
-              <a class="" routerLink="/candidates/{{value.id}}">{{value.id}}</a> 
             </td>
             <td>
                 {{value.name}}
@@ -33,7 +32,6 @@
             <td>
                 {{value.website}}
             </td>
-
         </tr>
     </tbody>
 </table>

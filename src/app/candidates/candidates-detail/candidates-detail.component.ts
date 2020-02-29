@@ -16,12 +16,12 @@ export class CandidatesDetailComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
-      this.getCandidatesById(params["candidatesId"])
+      this.getCandidatesById(params["id"])
     })
   }
 
-  getCandidatesById(candidatesId) {
-    this.candidateService.getCandidatesById(candidatesId).subscribe(data => {
+  getCandidatesById(id) {
+    this.candidateService.getCandidatesById(id).subscribe(data => {
       this.candidate = data;
 
     })

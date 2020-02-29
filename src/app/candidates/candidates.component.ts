@@ -14,16 +14,15 @@ export class CandidatesComponent implements OnInit {
 
   constructor(private candidateService: CandidateService) { }
   candidates: Candidate[];
-  candidate: Candidate;
 
 
   ngOnInit() {
     this.candidateService.getCandidates().subscribe(data => {
       this.candidates = data;
     });
-    
+
 
   }
-  
-  
+
+
 }

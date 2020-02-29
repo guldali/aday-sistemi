@@ -8,11 +8,11 @@ import { CandidatesDetailComponent } from './candidates/candidates-detail/candid
 
 const routes: Routes = [
   { path: 'candidates', component: CandidatesComponent },
-  { path: '', redirectTo: 'candidates', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'candidates/:candidatesId', component: CandidatesDetailComponent },
-  { path: '**', redirectTo: 'candidates', pathMatch: 'full' },
+  { path: 'candidates/:id', component: CandidatesDetailComponent },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
 
 
 ];

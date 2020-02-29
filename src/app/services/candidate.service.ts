@@ -4,7 +4,7 @@ import { Candidate } from '../candidates/candidates';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn:"root" 
+  providedIn: "root"
 })
 
 export class CandidateService {
@@ -16,8 +16,8 @@ export class CandidateService {
     return this.http.get<Candidate[]>(this.path);
 
   }
-  getCandidatesById(candidatesId): Observable<Candidate> {
-  
-    return this.http.get<Candidate>(this.path + "/?candidatesId" + candidatesId);
+  getCandidatesById(id): Observable<Candidate> {
+
+    return this.http.get<Candidate>(this.path + "?id" + id);
   }
 }
