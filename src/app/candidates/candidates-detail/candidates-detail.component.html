@@ -1,4 +1,4 @@
-<h3 style=" text-align: center; margin-top: 75px;">Aday Detay Bilgileri</h3>
+<h3 style=" text-align: center; margin-top: 75px;">{{title}}</h3>
 <br>
 <table class="table table-striped">
     <thead>
@@ -12,25 +12,25 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let value of candidate">
+        <tr *ngFor="let candidate of candidate">
             <td>
-                {{value.id}}
+                {{candidate.id}}
 
             </td>
             <td>
-                {{value.name}}
+                {{candidate.name}}
             </td>
             <td>
-                {{value.username}}
+                {{candidate.username}}
             </td>
             <td>
-                {{value.phone}}
+                {{candidate.phone}}
             </td>
             <td>
-                {{value.email}}
+                {{candidate.email}}
             </td>
             <td>
-                {{value.website}}
+                {{candidate.website}}
             </td>
         </tr>
     </tbody>

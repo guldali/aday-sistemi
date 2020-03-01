@@ -10,14 +10,13 @@ import { Observable } from 'rxjs';
 export class CandidateService {
 
   constructor(private http: HttpClient) { }
-  path = "https://jsonplaceholder.typicode.com/users";
+  path = "https://jsonplaceholder.typicode.com/users/";
 
   getCandidates(): Observable<Candidate[]> {
     return this.http.get<Candidate[]>(this.path);
 
   }
   getCandidatesById(id): Observable<Candidate> {
-
-    return this.http.get<Candidate>(this.path + "?id" + id);
+    return this.http.get<Candidate>(this.path + "/?id=" + id);
   }
 }

@@ -14,6 +14,7 @@ export class CandidatesComponent implements OnInit {
 
   constructor(private candidateService: CandidateService) { }
   candidates: Candidate[];
+  title="Aday Bilgileri";
 
 
   ngOnInit() {

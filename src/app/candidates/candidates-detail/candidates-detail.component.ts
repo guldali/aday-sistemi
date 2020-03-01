@@ -13,16 +13,19 @@ export class CandidatesDetailComponent implements OnInit {
 
   constructor(private candidateService: CandidateService, private activatedRoute: ActivatedRoute) { }
   candidate: Candidate;
+  title="Aday Detay Bilgileri"
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
       this.getCandidatesById(params["id"])
     })
+    
   }
 
   getCandidatesById(id) {
     this.candidateService.getCandidatesById(id).subscribe(data => {
       this.candidate = data;
+      
 
     })
 
